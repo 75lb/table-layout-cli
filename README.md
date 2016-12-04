@@ -5,7 +5,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # table-layout-cli
-Generates plain-text tables from JSON recordset input (array of objects). Useful for presenting text in column layout or data in table layout in text-based user interfaces. Install as a command-line tool or javascript module.
+Format data in column or table layout on the command line.
 
 ## Install
 
