@@ -1,28 +1,26 @@
-'use strict'
-
 class TableLayoutCli {
   constructor (options) {
     options = options || {}
 
     this.stdout = options.stdout || process.stdout
     this.stdin = require('stream').PassThrough()
-
   }
 
   go (argv) {
     const Table = require('table-layout')
-    const tool = require('command-line-tool')
+    const commandLineArgs = require('command-line-args')
     const collectJson = require('collect-json')
     const extend = require('deep-extend')
     const t = require('typical')
-    const cliData = require('./cli-data')
+    const cliData = require('./lib/cli-data')
 
-    const cli = tool.getCli(cliData.definitions, cliData.usageSections, argv)
-    const options = cli.options
+    const options = commandLineArgs(cliData.definitions, { argv })
 
     if (options.help) {
       const os = require('os')
-      this.stdout.write(cli.usage + os.EOL)
+      const commandLineUsage = require('command-line-usage')
+      const usage = commandLineUsage(cliData.usageSections)
+      this.stdout.write(usage + os.EOL)
       this.stdin.end()
       return
     }
@@ -66,7 +64,10 @@ class TableLayoutCli {
 
     this.stdin
       .pipe(collectJson(getTable))
-      .on('error', tool.halt)
+      .on('error', err => {
+        console.error(err)
+        process.exitCode = 1
+      })
       .pipe(this.stdout)
   }
 }

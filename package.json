@@ -3,9 +3,8 @@
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "1.0.0",
   "description": "Format data in column or table layout on the command line",
-  "repository": "https://github.com/75lb/table-layout-cli.git",
+  "repository": "https://github.com/75lb/table-layout-cli",
   "license": "MIT",
-  "main": "main.js",
   "bin": {
     "table-layout": "bin.js"
   },
@@ -19,24 +18,26 @@
     "command line"
   ],
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=8"
   },
   "scripts": {
-    "test": "node test.js",
-    "es5": "rm -rf es5 && babel --presets babel-preset-es2015 --no-comments src --out-dir es5"
+    "test": "test-runner test.js"
   },
   "dependencies": {
     "collect-json": "^1.0.8",
-    "command-line-tool": "^0.6.4",
-    "deep-extend": "^0.4.1",
-    "table-layout": "^0.3.0",
-    "typical": "^2.6.0",
-    "feature-detect-es6": "^1.3.1"
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.0.2",
+    "deep-extend": "^0.6.0",
+    "table-layout": "^1.0.0",
+    "typical": "^5.1.0"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "collect-all": "^1.0.2",
-    "core-assert": "^0.2.1",
-    "test-runner": "^0.3.0"
-  }
+    "collect-all": "^1.0.3",
+    "test-runner": "^0.6.0"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "bin"
+  ]
 }
