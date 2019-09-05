@@ -6,7 +6,7 @@
   "repository": "https://github.com/75lb/table-layout-cli",
   "license": "MIT",
   "bin": {
-    "table-layout": "bin.js"
+    "table-layout": "bin/cli.js"
   },
   "keywords": [
     "wrap",
