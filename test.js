@@ -23,5 +23,5 @@ tom.test('help', function () {
     })
   })
 
-  cli.go([ '--help' ])
+  cli.go(['--help'])
 })
