@@ -1,7 +1,8 @@
-[![view on npm](http://img.shields.io/npm/v/table-layout-cli.svg)](https://www.npmjs.org/package/table-layout-cli)
-[![npm module downloads](http://img.shields.io/npm/dt/table-layout-cli.svg)](https://www.npmjs.org/package/table-layout-cli)
+[![view on npm](https://badgen.net/npm/v/table-layout-cli)](https://www.npmjs.org/package/table-layout-cli)
+[![npm module downloads](https://badgen.net/npm/dt/table-layout-cli)](https://www.npmjs.org/package/table-layout-cli)
+[![Gihub repo dependents](https://badgen.net/github/dependents-repo/75lb/table-layout-cli)](https://github.com/75lb/table-layout-cli/network/dependents?dependent_type=REPOSITORY)
+[![Gihub package dependents](https://badgen.net/github/dependents-pkg/75lb/table-layout-cli)](https://github.com/75lb/table-layout-cli/network/dependents?dependent_type=PACKAGE)
 [![Build Status](https://travis-ci.org/75lb/table-layout-cli.svg?branch=master)](https://travis-ci.org/75lb/table-layout-cli)
-[![Dependency Status](https://badgen.net/david/dep/75lb/table-layout-cli)](https://david-dm.org/75lb/table-layout-cli)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # table-layout-cli
