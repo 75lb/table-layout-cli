@@ -1,29 +1,22 @@
+import Table from 'table-layout'
+import streamReadAll from 'stream-read-all'
+import commandLineArgs from 'command-line-args'
+import extend from 'deep-extend'
+import t from 'typical'
+import * as cliData from './lib/cli-data.mjs'
+import commandLineUsage from 'command-line-usage'
+
 class TableLayoutCli {
   constructor (options) {
     options = options || {}
-
-    this.stdout = options.stdout || process.stdout
-    this.stdin = require('stream').PassThrough()
   }
 
-  go (argv) {
-    const Table = require('table-layout')
-    const commandLineArgs = require('command-line-args')
-    const collectJson = require('collect-json')
-    const extend = require('deep-extend')
-    const t = require('typical')
-    const cliData = require('./lib/cli-data')
-
+  async go (argv, testInput) {
     const options = commandLineArgs(cliData.definitions, { argv })
-
     if (options.help) {
-      const os = require('os')
-      const commandLineUsage = require('command-line-usage')
-      const usage = commandLineUsage(cliData.usageSections)
-      this.stdout.write(usage + os.EOL)
-      this.stdin.end()
-      return
+      return commandLineUsage(cliData.usageSections)
     }
+    const input = testInput || await streamReadAll(process.stdin)
 
     const columns = []
     if (options.width) {
@@ -62,14 +55,9 @@ class TableLayoutCli {
       return table.toString()
     }
 
-    this.stdin
-      .pipe(collectJson(getTable))
-      .on('error', err => {
-        console.error(err)
-        process.exitCode = 1
-      })
-      .pipe(this.stdout)
+    const json = JSON.parse(input)
+    return getTable(json)
   }
 }
 
-module.exports = TableLayoutCli
+export default TableLayoutCli

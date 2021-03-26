@@ -6,8 +6,9 @@
   "repository": "https://github.com/75lb/table-layout-cli",
   "license": "MIT",
   "bin": {
-    "table-layout": "bin/cli.js"
+    "table-layout": "bin/cli.mjs"
   },
+  "main": "index.mjs",
   "keywords": [
     "wrap",
     "terminal",
@@ -18,25 +19,24 @@
     "command line"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=14"
   },
   "scripts": {
-    "test": "test-runner test.js"
+    "test": "test-runner test.mjs"
   },
   "dependencies": {
-    "collect-json": "^1.0.8",
     "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.0.2",
+    "command-line-usage": "^6.1.1",
     "deep-extend": "^0.6.0",
-    "table-layout": "^1.0.0",
-    "typical": "^5.1.0"
+    "stream-read-all": "^3.0.1",
+    "table-layout": "^2.1.0",
+    "typical": "^6.0.1"
   },
   "devDependencies": {
-    "collect-all": "^1.0.3",
-    "test-runner": "^0.6.0"
+    "test-runner": "^0.8.14"
   },
   "files": [
-    "index.js",
+    "index.mjs",
     "lib",
     "bin"
   ]
