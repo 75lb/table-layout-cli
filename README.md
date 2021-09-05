@@ -5,6 +5,9 @@
 [![Build Status](https://travis-ci.org/75lb/table-layout-cli.svg?branch=master)](https://travis-ci.org/75lb/table-layout-cli)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
+
+***DEPRECATED: This project now lives in the [table-layout](https://github.com/75lb/table-layout) project where it continues to be maintained***
+
 # table-layout-cli
 
 Format data in column or table layout on the command line.
