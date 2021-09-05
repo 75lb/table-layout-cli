@@ -6,7 +6,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 
-***DEPRECATED: This project now lives in the [table-layout](https://github.com/75lb/table-layout) project where it continues to be maintained***
+***DEPRECATED: This CLI now lives in the [table-layout](https://github.com/75lb/table-layout) project where it continues to be maintained***
 
 # table-layout-cli
 
