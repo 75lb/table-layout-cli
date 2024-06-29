@@ -6,11 +6,9 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 
-***DEPRECATED: This CLI now lives in the [table-layout](https://github.com/75lb/table-layout) project where it continues to be maintained***
-
 # table-layout-cli
 
-Format data in column or table layout on the command line.
+A command-line interface for [table-layout](https://github.com/75lb/table-layout). Format data in column or table layout on the command line.
 
 ## Install
 
@@ -162,4 +160,4 @@ Options
 
 * * *
 
-&copy; 2015-21 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2015-24 Lloyd Brookes \<75pound@gmail.com\>.

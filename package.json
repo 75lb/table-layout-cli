@@ -5,10 +5,10 @@
   "description": "Format data in column or table layout on the command line",
   "repository": "https://github.com/75lb/table-layout-cli",
   "license": "MIT",
+  "type": "module",
   "bin": {
-    "table-layout": "bin/cli.mjs"
+    "table-layout": "bin/cli.js"
   },
-  "main": "index.mjs",
   "keywords": [
     "wrap",
     "terminal",
@@ -19,25 +19,24 @@
     "command line"
   ],
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "scripts": {
-    "test": "test-runner test.mjs"
+    "test": "test-runner test/cli.js",
+    "examples": "for FILE in example/*.json; do echo \"# $FILE\"; echo; cat \"$FILE\" | node bin/cli.js; done"
   },
   "dependencies": {
-    "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.1",
-    "deep-extend": "^0.6.0",
-    "stream-read-all": "^3.0.1",
-    "table-layout": "^2.1.0",
-    "typical": "^6.0.1"
+    "@75lb/deep-merge": "^1.1.1",
+    "command-line-args": "^5.2.1",
+    "command-line-usage": "^7.0.1",
+    "stream-read-all": "^4.0.0",
+    "table-layout": "^3.0.2",
+    "typical": "^7.1.1"
   },
   "devDependencies": {
-    "test-runner": "^0.8.14"
+    "test-runner": "^0.10.1"
   },
   "files": [
-    "index.mjs",
-    "lib",
     "bin"
   ]
 }

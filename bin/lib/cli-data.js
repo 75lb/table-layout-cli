@@ -1,11 +1,17 @@
 export const definitions = [
   {
+    name: 'file',
+    type: String,
+    description: 'A JSON input file to read. If not present, table-layout will look for input on stdin.',
+    defaultOption: true
+  },
+  {
     name: 'width',
     type: String,
     multiple: true,
     alias: 'w',
-    typeLabel: '<widths>',
-    description: 'specify a list of column widths in the format \'<column>:<width>\', for example:\n$ cat <json data> | table-layout --width "column 1: 10" "column 2: 30"'
+    typeLabel: '{underline widths}',
+    description: 'specify a list of column widths in the format \'<column>:<width>\', for example:\n$ cat <file> | table-layout --width "column 1: 10" "column 2: 30"'
   },
   {
     name: 'padding-left',
@@ -33,7 +39,10 @@ export const usageSections = [
   },
   {
     header: 'Synopsis',
-    content: '$ cat {underline jsonfile} | table-layout [options]'
+    content: [
+      '$ cat {underline json-file} | table-layout [options]',
+      '$ table-layout [options] {underline json-file}'
+    ]
   },
   {
     header: 'Options',
